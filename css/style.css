@@ -43,3 +43,144 @@ main {
     letter-spacing: 0.1em;
     font-size: 0.9rem;
 }
+
+/*! HERO SECTIONS */
+.hero {
+    position: relative;
+    height: 60vh;
+    background: #333;
+    /* fallback if no img */
+    overflow: hidden;
+}
+
+.hero-home .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 4rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.hero-overlay h1 {
+    margin: 0;
+}
+
+.hero-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+/*! BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+/*! ABOUT & STATS */
+.about,
+.about-band {
+    padding: 3rem 2rem;
+    background: #111;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.stat-card {
+    flex: 1 1 150px;
+    padding: 1.5rem;
+    background: #333;
+    text-align: center;
+}
+
+/*! BAND PAGE - MEMBERS */
+.members {
+    padding: 3rem 2rem;
+}
+
+.member {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.member img {
+    width: 40%;
+}
+
+.member:nth-child(even) {
+    justify-content: end;
+    flex-direction: row-reverse;
+    /* reverse text & images every 2nd member shown */
+}
+
+/*! GALLERY GRID */
+.gallery {
+    padding: 3rem 2rem;
+    background: #000;
+}
+
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 1rem);
+    aspect-ratio: 1 / 1;
+    background: #eee;
+}
+
+/*! FORM */
+.booking {
+    padding: 3rem 2rem;
+    background: #111;
+}
+
+.booking form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.booking input,
+.booking select,
+.booking textarea {
+    padding: 0.8rem;
+    border: none;
+    width: 100%;
+}
