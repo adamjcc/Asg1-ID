@@ -4,57 +4,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Home - One Direction</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <header>
+    <header class="site-header">
         <!-- One Direction Logo (leads to index.html, home page)-->
-        <nav>
+        <div class="logo">
+            <a href="index.html">1D</a>
+        </div>
+        <nav class="main-nav">
             <ul>
-                <li>BAND</li>
-                <li>TOUR</li>
-                <li>CONTACT</li>
+                <li><a href="band.html">BAND</a></li>
+                <li><a href="tour.html">TOUR</a></li>
+                <li><a href="tour.html#contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
-        <!-- About the Band -->
-        <h1>ABOUT THE BAND</h1>
-    </section>
+    <main>
+        <section class="about"> <!-- About the Band -->
 
-    <section>
-        <!-- Latest Videos -->
-        <h1>LATEST VIDEOS</h1>
-        <iframe src="" frameborder="0"></iframe> <!-- video player -->
-    </section>
+            <h2>ABOUT THE BAND</h2>
+            <p>
+                One Direction formed in 2010 and became one of the best-selling boy bands of all time. Their music
+                continues to inspire millions of fans worldwide.
+            </p>
 
-    <section>
-        <!-- Upcoming Events -->
-        <h1>UPCOMING EVENTS</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>DATE</th>
-                    <th>VENUE</th>
-                    <th>COUNTRY</th>
-                    <th>BOOK NOW</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>12 JAN</td>
-                    <TD>NGEE ANN ART FEST CONCERT</TD>
-                    <TD>SINGAPORE</TD>
-                    <TD>BOOK</TD> <!-- book button -->
-                </tr>
-            </tbody>
-        </table>
-    </section>
+            <div class="stats">
+                <article class="stat-card">
+                    <h3>50M+</h3>
+                    <p>ALBUMS SOLD</p>
+                </article>
+                <article class="stat-card">
+                    <h3>200+</h3>
+                    <p>AWARDS WON</p>
+                </article>
+                <article class="stat-card">
+                    <h3>5</h3>
+                    <p>STUDIO ALBUMS</p>
+                </article>
+                <article class="stat-card">
+                    <h3>2010</h3>
+                    <p>YEAR FORMED</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="videos"> <!-- Latest Videos -->
+            <h2>LATEST VIDEOS</h2>
+            <div class="video-wrapper">
+                <iframe src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="events"> <!-- Upcoming Events -->
+            <h2>UPCOMING EVENTS</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>DATE</th>
+                        <th>VENUE</th>
+                        <th>COUNTRY</th>
+                        <th>BOOK NOW</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12 JAN</td>
+                        <TD>NGEE ANN ART FEST CONCERT</TD>
+                        <TD>SINGAPORE</TD>
+                        <TD>BOOK</TD> <!-- book button -->
+                    </tr>
+                </tbody>
+            </table>
+            <div class="view-more">
+                <a href="tour.html" class="btn">VIEW MORE</a>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <!-- social media links -->
+        <footer class="site-footer">
+            <div class="socials">
+                <a href="#">FB</a>
+                <a href="#">IG</a>
+                <a href="#">SPOTIFY</a>
+                <a href="#">YT</a>
+            </div>
+            <p>© 2024 One Direction Site</p>
+        </footer>
     </footer>
 
 </body>

@@ -4,11 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tour Page</title>
+    <title>Tour - One Direction</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <h1>TOUR DATES</h1>
+    <header class="site-header">
+        <!-- One Direction Logo (leads to index.html, home page)-->
+        <div class="logo">
+            <a href="index.html">1D</a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="band.html">BAND</a></li>
+                <li><a href="tour.html">TOUR</a></li>
+                <li><a href="tour.html#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero hero-tour">
+            <div class="hero-overlay">
+                <h1>TOUR DATES</h1>
+                <p>Check out upcoming tribute shows and events celebrating One Direction's music.</p>
+            </div>
+        </section>
+
+        <section class="tour-list">
+            <h2>TOUR DATES</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>DATE</th>
+                        <th>VENUE</th>
+                        <th>COUNTRY</th>
+                        <th>BOOK NOW</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12 JAN</td>
+                        <TD>NGEE ANN ART FEST CONCERT</TD>
+                        <TD>SINGAPORE</TD>
+                        <TD>BOOK</TD> <!-- book button -->
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="booking" id="contact">
+            <h2>BOOK US FOR YOUR EVENT</h2>
+            <p>Interested in booking a One Direction tribute performance for your event? Fill out the form below and
+                we'll get back to you within 48 hours. We're available for corporate events, private parties, festivals,
+                and more.</p>
+            <form>
+                <label for="name">NAME</label>
+                <input id="name" name="name" type="text" required>
+
+                <label for="email">EMAIL</label>
+                <input id="email" name="email" type="email" required>
+
+                <label for="event-type">EVENT TYPE</label>
+                <select id="event-type" name="event-type">
+                    <option>Concert</option>
+                    <option>Private Event</option>
+                    <option>Corporate</option>
+                </select>
+
+                <label for="event-date">EVENT DATE</label>
+                <input id="event-date" name="event-date" type="date">
+
+                <label for="message">MESSAGE</label>
+                <textarea id="message" name="message"></textarea>
+
+                <button type="submit" class="btn">SUBMIT</button>
+            </form>
+        </section>
+
+    </main>
 </body>
 
 </html>

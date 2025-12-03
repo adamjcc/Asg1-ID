@@ -4,11 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Band Members Page</title>
+    <title>Band - One Direction</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <h1>ABOUT THE BAND MEMBERS</h1>
+    <header class="site-header">
+        <!-- One Direction Logo (leads to index.html, home page)-->
+        <div class="logo">
+            <a href="index.html">1D</a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="band.html">BAND</a></li>
+                <li><a href="tour.html">TOUR</a></li>
+                <li><a href="tour.html#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero hero-band">
+            <div class="hero-overlay">
+                <h1>MEET THE BAND MEMBERS</h1>
+            </div>
+        </section>
+
+        <section class="about-band">
+            <h2>ABOUT THE BAND</h2>
+            <p>One Direction consisted of five talented individuals who came together to create something special. Each
+                member brought their unique personality and talents to make the band what it was. Learn more about each
+                member below.</p>
+        </section>
+
+        <section class="members">
+            <article class="member">
+                <img src="../assets/images/band-page/member-harry.jpg" alt="Harry Styles">
+                <div class="member-text">
+                    <h3>HARRY STYLES</h3>
+                    <p>Known for his warm vocals and confident stage presence, Harry often took lead on melodies and
+                        brought a distinctive, playful energy to the band's performances.</p>
+                </div>
+            </article>
+
+            <article class="member">
+                <img src="../assets/images/band-page/member-niall.webp" alt="Niall Horan">
+                <div class="member-text">
+                    <h3>NIALL HORAN</h3>
+                    <p>Niall is the easygoing guitarist and vocalist of the group, adding a bright tone to their
+                        harmonies and often connecting with fans through his friendly, down-to-earth personality.</p>
+                </div>
+            </article>
+
+            <article class="member">
+                <img src="../assets/images/band-page/member-liam.webp" alt="Liam Payne">
+                <div class="member-text">
+                    <h3>LIAM PAYNE</h3>
+                    <p>Liam's strong voice and control over lower harmonies helped anchor many of the band's songs, and
+                        he frequently took the lead on more powerful or rhythmic sections.</p>
+                </div>
+            </article>
+
+            <article class="member">
+                <img src="../assets/images/band-page/member-louis.jpg" alt="Louis Tomlinson">
+                <div class="member-text">
+                    <h3>LOUIS TOMLINSON</h3>
+                    <p>Louis contributed character and edge to the group with his distinctive tone, and he was heavily
+                        involved in shaping the band's sound through songwriting and ideas.</p>
+                </div>
+            </article>
+
+            <article class="member">
+                <img src="../assets/images/band-page/member-zayn.jpg" alt="Zayn Malik">
+                <div class="member-text">
+                    <h3>ZAYN MALIK</h3>
+                    <p>Zayn was known for his smooth R&amp;B-influenced vocals and impressive high notes, often
+                        delivering the dramatic moments and ad-libs that closed out many of their songs.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="gallery">
+            <div class="gallery-header">
+                <h2>GALLERY</h2>
+                <select> <!-- learnt: creates dropdown list with options -->
+                    <option>ALL</option>
+                    <option>LIVE</option>
+                    <option>STUDIO</option>
+                </select>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+                <div class="gallery-item"></div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
