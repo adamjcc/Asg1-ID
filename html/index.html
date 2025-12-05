@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="../assets/images/others/logo.png">
 </head>
 
-<body>
+<body class="home-page">
     <header class="site-header">
         <!-- One Direction Logo (leads to index.html, home page)-->
         <div class="logo">
@@ -30,13 +30,59 @@
     <main>
         <section class="hero hero-home">
             <div class="hero-overlay">
-                <p>MUSIC, MEMORIES, AND MOMENTS</p>
-                <div class="hero-buttons">
-                    <a href="https://1D.lnk.to/Spotify" class="btn">LISTEN NOW</a>
-                    <a href="tour.html#contact" class="btn btn-secondary">BOOK AN EVENT</a>
+                <div class="hero-content">
+                    <!-- TOP: centred logo + tagline -->
+                    <div class="hero-top">
+                        <img src="../assets/icons/logo-text.png" alt="One Direction Header" class="hero-wordmark">
+
+                        <p class="hero-tagline">MUSIC, MEMORIES, AND MOMENTS</p>
+                    </div>
+
+                    <!-- BOTTOM: links + socials (left) and discography (right) -->
+                    <div class="hero-bottom">
+                        <div class="hero-left">
+                            <nav class="hero-links">
+                                <a href="band.html">BAND</a>
+                                <a href="tour.html">TOUR</a>
+                                <a href="tour.html#contact">CONTACT</a>
+                            </nav>
+
+                            <div class="hero-socials hero-socials-icons">
+                                <a href="https://1D.lnk.to/Spotify" class="social-icon-sm">
+                                    <img src="../assets/icons/light/spotify.png" alt="Spotify">
+                                </a>
+                                <a href="https://1D.lnk.to/AppleMusic" class="social-icon-sm">
+                                    <img src="../assets/icons/light/applemusic.png" alt="Apple Music">
+                                </a>
+                                <a href="https://smarturl.it/OneDirection_YT_Sub" class="social-icon-sm">
+                                    <img src="../assets/icons/light/youtube.png" alt="YouTube">
+                                </a>
+                                <a href="https://www.instagram.com/onedirection/" class="social-icon-sm">
+                                    <img src="../assets/icons/light/instagram.png" alt="Instagram">
+                                </a>
+                                <a href="https://www.facebook.com/onedirectionmusic/" class="social-icon-sm">
+                                    <img src="../assets/icons/light/facebook.png" alt="Facebook">
+                                </a>
+                                <a href="tour.html#contact" class="social-icon-sm">
+                                    <img src="../assets/icons/light/email.png" alt="Email">
+                                </a>
+                            </div>
+                        </div>
+
+                        <aside class="hero-discography">
+                            <h2>DISCOGRAPHY</h2>
+                            <p>
+                                One Direction released five studio albums in just five years. Their records topped
+                                charts
+                                worldwide, filled with stadium-ready pop, sing-along choruses and
+                                fan-favourite deep cuts that still define the 2010s pop sound.
+                            </p>
+                        </aside>
+                    </div>
                 </div>
             </div>
         </section>
+
 
         <section class="about"> <!-- About the Band -->
 
@@ -86,28 +132,58 @@
             </div>
         </section>
 
-        <section class="events"> <!-- Upcoming Events -->
+        <section class="section-header">
             <h2>UPCOMING EVENTS</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>DATE</th>
-                        <th>VENUE</th>
-                        <th>COUNTRY</th>
-                        <th>BOOK NOW</th>
-                    </tr>
-                </thead>
+        </section>
+
+        <section class="events-container">
+            <table class="events-table">
                 <tbody>
                     <tr>
-                        <td>12 JAN</td>
-                        <TD>NGEE ANN ART FEST CONCERT</TD>
-                        <TD>SINGAPORE</TD>
-                        <TD>BOOK</TD> <!-- book button -->
+                        <td class="date-col">12 JAN</td>
+                        <td class="info-col">
+                            <span class="event-name">NGEE ANN ART FEST</span>
+                            <span class="location">SINGAPORE</span>
+                        </td>
+                        <td class="btn-col">
+                            <a href="#" class="btn-book">BOOK</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="date-col">14 FEB</td>
+                        <td class="info-col">
+                            <span class="event-name">VALENTINES SPECIAL</span>
+                            <span class="location">LONDON, UK</span>
+                        </td>
+                        <td class="btn-col">
+                            <a href="#" class="btn-book">BOOK</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="date-col">20 MAR</td>
+                        <td class="info-col">
+                            <span class="event-name">MADISON SQUARE GARDEN</span>
+                            <span class="location">NEW YORK, USA</span>
+                        </td>
+                        <td class="btn-col">
+                            <a href="#" class="btn-book">BOOK</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="date-col">05 APR</td>
+                        <td class="info-col">
+                            <span class="event-name">SYDNEY OPERA HOUSE</span>
+                            <span class="location">SYDNEY, AUS</span>
+                        </td>
+                        <td class="btn-col">
+                            <a href="#" class="btn-book">BOOK</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
+
             <div class="view-more">
-                <a href="tour.html" class="btn">VIEW MORE</a>
+                <a href="tour.html" class="btn btn-view-more">VIEW MORE</a>
             </div>
         </section>
     </main>
@@ -115,22 +191,22 @@
     <footer class="site-footer">
         <div class="socials">
             <a href="https://1D.lnk.to/Spotify" class="social-icon">
-                <img src="../assets/icons/spotify.png" alt="Spotify">
+                <img src="../assets/icons/dark/spotify_dark.png" alt="Spotify">
             </a>
             <a href="https://1D.lnk.to/AppleMusic" class="social-icon">
-                <img src="../assets/icons/applemusic.png" alt="Apple Music">
+                <img src="../assets/icons/dark/applemusic_dark.png" alt="Apple Music">
             </a>
             <a href="https://smarturl.it/OneDirection_YT_Sub" class="social-icon">
-                <img src="../assets/icons/youtube.png" alt="YouTube">
+                <img src="../assets/icons/dark/youtube_dark.png" alt="YouTube">
             </a>
             <a href="https://www.instagram.com/onedirection/" class="social-icon">
-                <img src="../assets/icons/instagram.png" alt="Instagram">
+                <img src="../assets/icons/dark/instagram_dark.png" alt="Instagram">
             </a>
             <a href="https://www.facebook.com/onedirectionmusic/" class="social-icon">
-                <img src="../assets/icons/facebook.png" alt="Facebook">
+                <img src="../assets/icons/dark/facebook_dark.png" alt="Facebook">
             </a>
             <a href="mailto:contact@onedirection.com" class="social-icon">
-                <img src="../assets/icons/email.png" alt="Email">
+                <img src="../assets/icons/dark/email_dark.png" alt="Email">
             </a>
         </div>
 

@@ -53,23 +53,16 @@ main {
 .hero {
     position: relative;
     height: 60vh;
+    /* default for band/tour */
     background: #333;
-    /* fallback if no img */
     overflow: hidden;
 }
 
-.hero-home {
-    height: 100vh;
-    background: url("../assets/images/home-page/band_homepage.png") center bottom / cover no-repeat;
-}
-
 .hero-band {
-    /* use the stage/lights photo, or whichever you prefer */
     background: url("../assets/images/band-page/band_bandpage.webp") center center / cover no-repeat;
 }
 
 .hero-tour {
-    /* you can reuse the same image or another one */
     background: url("../assets/images/tour-page/band_tourpage.webp") center center / cover no-repeat;
 }
 
@@ -93,6 +86,113 @@ main {
     margin-top: 1rem;
     display: flex;
     gap: 1rem;
+}
+
+/*! HERO - HOME PAGE */
+/* HOME PAGE HERO */
+.hero-home {
+    height: 100vh;
+    background: url("../assets/images/home-page/band_homepage.png") center bottom / cover no-repeat;
+}
+
+.hero-home .hero-overlay {
+    background: none;
+    padding: 2.5rem 4rem;
+    align-items: stretch;
+    justify-content: stretch;
+    text-align: left;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.hero-top {
+    text-align: center;
+}
+
+.hero-wordmark {
+    width: 50vw;
+    max-width: 700px;
+    min-width: 320px;
+    height: auto;
+    margin: 2rem auto 3rem auto;
+}
+
+.hero-tagline {
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0 0 2rem 0;
+}
+
+.hero-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex: 1;
+    gap: 2rem;
+}
+
+/* LEFT COLUMN */
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hero-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 0.2em;
+}
+
+/* socials locked to bottom-left */
+.hero-socials-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.social-icon-sm img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* RIGHT COLUMN – DISCOGRAPHY BOX */
+.hero-discography {
+    max-width: 380px;
+    margin-left: auto;
+    text-align: right;
+    color: #fff;
+    background: none;
+    padding: 0;
+}
+
+.hero-discography h2 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.2rem;
+    /* same as .hero-links a */
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.hero-discography p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 /*! BUTTONS */
@@ -247,6 +347,124 @@ main {
     flex: 1 1 calc(33.333% - 1rem);
     aspect-ratio: 1 / 1;
     background: #eee;
+}
+
+/*! EVENTS SECTION (TABLES) */
+.section-header {
+    background-color: #171717;
+    /* Matches your body background */
+    padding: 3rem 2rem 1rem 2rem;
+    /* Padding Bottom is small (1rem) to sit close to the table */
+    text-align: left;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section-header h2 {
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.events-container {
+    background-color: #333;
+    color: #fff;
+    padding: 3rem 2rem;
+    width: 100%;
+    text-align: start;
+}
+
+.events-container h2 {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+/* TABLE STYLING */
+.events-table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.events-table tr {
+    border-bottom: 1px solid #666;
+    /* The thin line between rows */
+}
+
+.events-table tr:last-child {
+    border-bottom: none;
+    /* no line under the last row */
+}
+
+/* Padding for all cells */
+.events-table td {
+    padding: 1.5rem 1rem;
+    vertical-align: middle;
+}
+
+/* COLUMN SPECIFIC STYLES */
+.date-col {
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 20%;
+    white-space: nowrap;
+}
+
+.info-col {
+    width: 60%;
+}
+
+.event-name {
+    display: block;
+    /* Puts name on its own line */
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.location {
+    display: block;
+    font-size: 0.9rem;
+    color: #ccc;
+    /* Slightly lighter grey for location */
+    margin-top: 0.3rem;
+    text-transform: uppercase;
+}
+
+.btn-col {
+    width: 20%;
+    text-align: right;
+}
+
+/* BOOK BUTTON (The rectangular light grey button) */
+.btn-book {
+    display: inline-block;
+    background-color: #ddd;
+    /* Light grey background */
+    color: #000;
+    /* Black text */
+    padding: 0.6rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+/* VIEW MORE BUTTON (Home Page) */
+.view-more {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.btn-view-more {
+    background-color: #888;
+    /* Darker grey for View More */
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /*! FORM */
