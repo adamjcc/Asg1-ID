@@ -4,16 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - One Direction</title>
+    <title>Home | One Direction</title>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../assets/images/others/logo.png">
 </head>
 
 <body>
     <header class="site-header">
         <!-- One Direction Logo (leads to index.html, home page)-->
         <div class="logo">
-            <a href="index.html">1D</a>
+            <a href="index.html">
+                <img src="../assets/icons/logo.png" alt="One Direction logo" class="logo-img">
+            </a>
         </div>
         <nav class="main-nav">
             <ul>
@@ -25,12 +28,27 @@
     </header>
 
     <main>
+        <section class="hero hero-home">
+            <div class="hero-overlay">
+                <p>MUSIC, MEMORIES, AND MOMENTS</p>
+                <div class="hero-buttons">
+                    <a href="https://1D.lnk.to/Spotify" class="btn">LISTEN NOW</a>
+                    <a href="tour.html#contact" class="btn btn-secondary">BOOK AN EVENT</a>
+                </div>
+            </div>
+        </section>
+
         <section class="about"> <!-- About the Band -->
 
             <h2>ABOUT THE BAND</h2>
             <p>
-                One Direction formed in 2010 and became one of the best-selling boy bands of all time. Their music
-                continues to inspire millions of fans worldwide.
+                <strong>One Direction (1D)</strong> was a globally famous English-Irish pop boy band formed on The X
+                Factor in 2010, featuring members Harry Styles, Niall Horan, Louis Tomlinson, Liam Payne, and Zayn Malik
+                (who left in
+                2015). Known for hit albums like Up All Night and Midnight Memories, they achieved massive success with
+                catchy pop-rock songs, five albums, and world tours before going on an indefinite hiatus in 2016 to
+                pursue solo careers, with all members finding success in music and other fields.
+
             </p>
 
             <div class="stats">
@@ -53,10 +71,18 @@
             </div>
         </section>
 
-        <section class="videos"> <!-- Latest Videos -->
+        <section class="videos">
             <h2>LATEST VIDEOS</h2>
-            <div class="video-wrapper">
-                <iframe src="" frameborder="0" allowfullscreen></iframe>
+            <div class="video-slider">
+                <button class="arrow-btn" id="prevBtn">&#10094;</button>
+                <div class="video-wrapper">
+                    <iframe id="video-player" src="https://www.youtube.com/embed/CPARHayTxqc"
+                        title="One Direction - What Makes You Beautiful (Official Video)" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <button class="arrow-btn" id="nextBtn">&#10095;</button>
             </div>
         </section>
 
@@ -86,16 +112,29 @@
         </section>
     </main>
 
-    <footer>
-        <footer class="site-footer">
-            <div class="socials">
-                <a href="#">FB</a>
-                <a href="#">IG</a>
-                <a href="#">SPOTIFY</a>
-                <a href="#">YT</a>
-            </div>
-            <p>© 2024 One Direction Site</p>
-        </footer>
+    <footer class="site-footer">
+        <div class="socials">
+            <a href="https://1D.lnk.to/Spotify" class="social-icon">
+                <img src="../assets/icons/spotify.png" alt="Spotify">
+            </a>
+            <a href="https://1D.lnk.to/AppleMusic" class="social-icon">
+                <img src="../assets/icons/applemusic.png" alt="Apple Music">
+            </a>
+            <a href="https://smarturl.it/OneDirection_YT_Sub" class="social-icon">
+                <img src="../assets/icons/youtube.png" alt="YouTube">
+            </a>
+            <a href="https://www.instagram.com/onedirection/" class="social-icon">
+                <img src="../assets/icons/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/onedirectionmusic/" class="social-icon">
+                <img src="../assets/icons/facebook.png" alt="Facebook">
+            </a>
+            <a href="mailto:contact@onedirection.com" class="social-icon">
+                <img src="../assets/icons/email.png" alt="Email">
+            </a>
+        </div>
+
+        <p class="copyright-text">© 2025 One Direction Site</p>
     </footer>
 
 </body>
