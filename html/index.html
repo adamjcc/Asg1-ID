@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/png" href="../assets/images/others/logo.png">
+    <script src="../javascript/script.js"></script>
 </head>
 
 <body class="home-page">
@@ -48,22 +49,25 @@
                             </nav>
 
                             <div class="hero-socials hero-socials-icons">
-                                <a href="https://1D.lnk.to/Spotify" class="social-icon-sm">
+                                <a href="https://1D.lnk.to/Spotify" target="_blank" class="social-icon-sm">
                                     <img src="../assets/icons/light/spotify.png" alt="Spotify">
                                 </a>
-                                <a href="https://1D.lnk.to/AppleMusic" class="social-icon-sm">
+                                <a href="https://1D.lnk.to/AppleMusic" target="_blank" class="social-icon-sm">
                                     <img src="../assets/icons/light/applemusic.png" alt="Apple Music">
                                 </a>
-                                <a href="https://smarturl.it/OneDirection_YT_Sub" class="social-icon-sm">
+                                <a href="https://smarturl.it/OneDirection_YT_Sub" target="_blank"
+                                    class="social-icon-sm">
                                     <img src="../assets/icons/light/youtube.png" alt="YouTube">
                                 </a>
-                                <a href="https://www.instagram.com/onedirection/" class="social-icon-sm">
+                                <a href="https://www.instagram.com/onedirection/" target="_blank"
+                                    class="social-icon-sm">
                                     <img src="../assets/icons/light/instagram.png" alt="Instagram">
                                 </a>
-                                <a href="https://www.facebook.com/onedirectionmusic/" class="social-icon-sm">
+                                <a href="https://www.facebook.com/onedirectionmusic/" target="_blank"
+                                    class="social-icon-sm">
                                     <img src="../assets/icons/light/facebook.png" alt="Facebook">
                                 </a>
-                                <a href="tour.html#contact" class="social-icon-sm">
+                                <a href="mailto:onedirection@email.com" target="_blank" class="social-icon-sm">
                                     <img src="../assets/icons/light/email.png" alt="Email">
                                 </a>
                             </div>
@@ -85,7 +89,6 @@
 
 
         <section class="about"> <!-- About the Band -->
-
             <h2>ABOUT THE BAND</h2>
             <p>
                 <strong>One Direction (1D)</strong> was a globally famous English-Irish pop boy band formed on The X
@@ -119,24 +122,31 @@
 
         <section class="videos">
             <h2>LATEST VIDEOS</h2>
+
             <div class="video-slider">
                 <button class="arrow-btn" id="prevBtn">&#10094;</button>
+
                 <div class="video-wrapper">
-                    <iframe id="video-player" src="https://www.youtube.com/embed/CPARHayTxqc"
-                        title="One Direction - What Makes You Beautiful (Official Video)" frameborder="0"
+                    <iframe id="video-player" src="" title="" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                     </iframe>
                 </div>
+
                 <button class="arrow-btn" id="nextBtn">&#10095;</button>
+            </div>
+
+            <!-- small dots under the video -->
+            <div class="video-indicators">
+                <button class="video-dot active" data-index="0" aria-label="Video 1"></button>
+                <button class="video-dot" data-index="1" aria-label="Video 2"></button>
+                <button class="video-dot" data-index="2" aria-label="Video 3"></button>
             </div>
         </section>
 
-        <section class="section-header">
-            <h2>UPCOMING EVENTS</h2>
-        </section>
 
-        <section class="events-container">
+        <section class="events">
+            <h2>UPCOMING EVENTS</h2>
             <table class="events-table">
                 <tbody>
                     <tr>
@@ -190,22 +200,22 @@
 
     <footer class="site-footer">
         <div class="socials">
-            <a href="https://1D.lnk.to/Spotify" class="social-icon">
+            <a href="https://1D.lnk.to/Spotify" target="_blank" class="social-icon">
                 <img src="../assets/icons/dark/spotify_dark.png" alt="Spotify">
             </a>
-            <a href="https://1D.lnk.to/AppleMusic" class="social-icon">
+            <a href="https://1D.lnk.to/AppleMusic" target="_blank" class="social-icon">
                 <img src="../assets/icons/dark/applemusic_dark.png" alt="Apple Music">
             </a>
-            <a href="https://smarturl.it/OneDirection_YT_Sub" class="social-icon">
+            <a href="https://smarturl.it/OneDirection_YT_Sub" target="_blank" class="social-icon">
                 <img src="../assets/icons/dark/youtube_dark.png" alt="YouTube">
             </a>
-            <a href="https://www.instagram.com/onedirection/" class="social-icon">
+            <a href="https://www.instagram.com/onedirection/" target="_blank" class="social-icon">
                 <img src="../assets/icons/dark/instagram_dark.png" alt="Instagram">
             </a>
-            <a href="https://www.facebook.com/onedirectionmusic/" class="social-icon">
+            <a href="https://www.facebook.com/onedirectionmusic/" target="_blank" class="social-icon">
                 <img src="../assets/icons/dark/facebook_dark.png" alt="Facebook">
             </a>
-            <a href="mailto:contact@onedirection.com" class="social-icon">
+            <a href="mailto:contact@onedirection.com" target="_blank" class="social-icon">
                 <img src="../assets/icons/dark/email_dark.png" alt="Email">
             </a>
         </div>

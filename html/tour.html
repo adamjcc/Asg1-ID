@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/png" href="../assets/images/others/logo.png">
+    <script src="../javascript/script.js"></script>
 </head>
 
-<body>
+<body class="tour-page">
     <header class="site-header">
         <!-- One Direction Logo (leads to index.html, home page)-->
         <div class="logo">
@@ -29,17 +30,13 @@
 
     <main>
         <section class="hero hero-tour">
-            <div class="hero-overlay">
-                <h1>TOUR DATES</h1>
+            <div class="hero-overlay hero-tour-overlay">
+                <h1 class="hero-tour-title">TOUR DATES</h1>
             </div>
         </section>
 
-        <section class="section-header">
-            <h2>TOUR DATES</h2>
-            <p>Check out upcoming tribute shows and events celebrating One Direction's music.</p>
-        </section>
 
-        <section class="events-container">
+        <section class="tour-dates">
             <table class="events-table">
                 <tbody>
                     <tr>
@@ -131,7 +128,7 @@
             <p>Interested in booking a One Direction tribute performance for your event? Fill out the form below and
                 we'll get back to you within 48 hours. We're available for corporate events, private parties, festivals,
                 and more.</p>
-            <form>
+            <form class="form">
                 <label for="name">NAME</label>
                 <input id="name" name="name" type="text" required>
 
@@ -158,22 +155,22 @@
 
     <footer class="site-footer">
         <div class="socials">
-            <a href="https://1D.lnk.to/Spotify" class="social-icon">
+            <a href="https://1D.lnk.to/Spotify" target="_blank" class="social-icon">
                 <img src="../assets/icons/dark/spotify_dark.png" alt="Spotify">
             </a>
-            <a href="https://1D.lnk.to/AppleMusic" class="social-icon">
+            <a href="https://1D.lnk.to/AppleMusic" target="_blank" class="social-icon">
                 <img src="../assets/icons/dark/applemusic_dark.png" alt="Apple Music">
             </a>
-            <a href="https://smarturl.it/OneDirection_YT_Sub" class="social-icon">
+            <a href="https://smarturl.it/OneDirection_YT_Sub" target="_blank" class="social-icon">
                 <img src="../assets/icons/dark/youtube_dark.png" alt="YouTube">
             </a>
-            <a href="https://www.instagram.com/onedirection/" class="social-icon">
+            <a href="https://www.instagram.com/onedirection/" target="_blank" class="social-icon">
                 <img src="../assets/icons/dark/instagram_dark.png" alt="Instagram">
             </a>
-            <a href="https://www.facebook.com/onedirectionmusic/" class="social-icon">
+            <a href="https://www.facebook.com/onedirectionmusic/" target="_blank" class="social-icon">
                 <img src="../assets/icons/dark/facebook_dark.png" alt="Facebook">
             </a>
-            <a href="mailto:contact@onedirection.com" class="social-icon">
+            <a href="mailto:contact@onedirection.com" target="_blank" class="social-icon">
                 <img src="../assets/icons/dark/email_dark.png" alt="Email">
             </a>
         </div>
