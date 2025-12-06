@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector(".site-header");
     if (!header) return;
 
-    /* HOME PAGE */
+    //! HOME PAGE
     if (body.classList.contains("home-page")) {
         const hero = document.querySelector(".hero-home");
         if (hero) {
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             window.addEventListener("scroll", toggleHomeHeader);
         }
 
-        /* VIDEO PLAYER */
+        //! VIDEO PLAYER
         const videoPlayer = document.getElementById("video-player");
         const prevBtn = document.getElementById("prevBtn");
         const nextBtn = document.getElementById("nextBtn");
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* BAND PAGE */
+    //! BAND PAGE
     if (body.classList.contains("band-page")) {
         const bandHero = document.querySelector(".hero-band");
         if (bandHero) {
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    /* TOUR PAGE */
+    //! TOUR PAGE
     if (body.classList.contains("tour-page")) {
         const tourHero = document.querySelector(".hero-tour");
         if (tourHero) {
@@ -113,4 +113,27 @@ document.addEventListener("DOMContentLoaded", function () {
             window.addEventListener("scroll", toggleTourHeader);
         }
     }
+});
+
+
+//! ---------- GALLERY FILTER ----------
+document.addEventListener("DOMContentLoaded", () => {
+    const filterSelect = document.querySelector("#galleryfilter");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    if (!filterSelect || !galleryItems.length) return;
+
+    filterSelect.addEventListener("change", () => {
+        const value = filterSelect.value; // "all", "live", "studio"
+
+        galleryItems.forEach((item) => {
+            const type = item.dataset.type; // from data-type="live" / "studio"
+
+            if (value === "all" || type === value) {
+                item.style.display = "";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    });
 });

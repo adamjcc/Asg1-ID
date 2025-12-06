@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book | One Direction</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../assets/images/others/logo.png">
+    <script src="../javascript/script.js"></script>
+</head>
+
+<body class="booking-page">
+    <header class="site-header">
+        <!-- One Direction Logo (leads to index.html, home page)-->
+        <div class="logo">
+            <a href="index.html">
+                <img src="../assets/icons/logo.png" alt="One Direction logo" class="logo-img">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="band.html" class="nav-link">BAND</a></li>
+                <li><a href="tour.html" class="nav-link">TOUR</a></li>
+                <li><a href="booking.html" class="nav-link nav-active">BOOKING</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero hero-booking">
+            <div class="hero-overlay hero-booking-overlay">
+                <h1 class="hero-booking-title">BOOK NOW</h1>
+            </div>
+        </section>
+
+        <section class="booking">
+            <h2>BOOK AN EXPERIENCE WITH US</h2>
+            <p>Interested in a One Direction concert near you, or looking to book a One Direction tribute performance
+                for your
+                event?
+                Fill out the form below and
+                we'll get back to you within 48 hours. We're available for corporate events, private parties, festivals,
+                and more. Terms and conditions apply.</p>
+            <form class="form">
+                <label for="name">NAME</label>
+                <input id="name" name="name" type="text" required>
+
+                <label for="email">EMAIL</label>
+                <input id="email" name="email" type="email" required>
+
+                <label for="event-type">EVENT TYPE</label>
+                <select id="event-type" name="event-type">
+                    <option>Concert</option>
+                    <option>Private Event</option>
+                    <option>Corporate</option>
+                </select>
+
+                <label for="event-date">EVENT DATE</label>
+                <input id="event-date" name="event-date" type="date">
+
+                <label for="message">MESSAGE</label>
+                <textarea id="message" name="message"></textarea>
+
+                <button type="submit" class="btn">SUBMIT</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="socials">
+            <a href="https://1D.lnk.to/Spotify" target="_blank" class="social-icon">
+                <img src="../assets/icons/dark/spotify_dark.png" alt="Spotify">
+            </a>
+            <a href="https://1D.lnk.to/AppleMusic" target="_blank" class="social-icon">
+                <img src="../assets/icons/dark/applemusic_dark.png" alt="Apple Music">
+            </a>
+            <a href="https://smarturl.it/OneDirection_YT_Sub" target="_blank" class="social-icon">
+                <img src="../assets/icons/dark/youtube_dark.png" alt="YouTube">
+            </a>
+            <a href="https://www.instagram.com/onedirection/" target="_blank" class="social-icon">
+                <img src="../assets/icons/dark/instagram_dark.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/onedirectionmusic/" target="_blank" class="social-icon">
+                <img src="../assets/icons/dark/facebook_dark.png" alt="Facebook">
+            </a>
+            <a href="mailto:contact@onedirection.com" target="_blank" class="social-icon">
+                <img src="../assets/icons/dark/email_dark.png" alt="Email">
+            </a>
+        </div>
+
+        <p class="copyright-text">© 2025 One Direction Site</p>
+    </footer>
+</body>
+
+</html>

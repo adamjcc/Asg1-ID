@@ -21,9 +21,9 @@
         </div>
         <nav class="main-nav">
             <ul>
-                <li><a href="band.html">BAND</a></li>
-                <li><a href="tour.html">TOUR</a></li>
-                <li><a href="tour.html#contact">CONTACT</a></li>
+                <li><a href="band.html" class="nav-link nav-active">BAND</a></li>
+                <li><a href="tour.html" class="nav-link">TOUR</a></li>
+                <li><a href="booking.html" class="nav-link">BOOKING</a></li>
             </ul>
         </nav>
     </header>
@@ -37,55 +37,160 @@
 
         <section class="band-members">
             <article class="member">
-                <img src="../assets/images/band-page/member-harry.jpg" alt="Harry Styles">
+                <div class="member-photo">
+                    <img src="../assets/images/band-page/member-harry.jpg" alt="Harry Styles">
+                </div>
                 <div class="member-text">
-                    <h3>HARRY STYLES</h3>
-                    <p>Known for his warm vocals and confident stage presence, Harry often took lead on melodies and
+                    <h2 class="member-name">HARRY STYLES</h2>
+                    <h3 class="member-role">FRONTMAN</h3>
+                    <p class="member-content">Known for his warm vocals and confident stage presence, Harry often took
+                        lead on melodies and
                         brought a distinctive, playful energy to the band's performances.</p>
                 </div>
             </article>
 
             <article class="member">
-                <img src="../assets/images/band-page/member-niall.webp" alt="Niall Horan">
+                <div class="member-photo">
+                    <img src="../assets/images/band-page/member-niall.webp" alt="Niall Horan">
+                </div>
                 <div class="member-text">
-                    <h3>NIALL HORAN</h3>
-                    <p>Niall is the easygoing guitarist and vocalist of the group, adding a bright tone to their
+                    <h2 class="member-name">NIALL HORAN</h2>
+                    <h3 class="member-role">GUITARIST</h3>
+                    <p class="member-content">Niall is the easygoing guitarist and vocalist of the group, adding a
+                        bright tone to their
                         harmonies and often connecting with fans through his friendly, down-to-earth personality.</p>
                 </div>
             </article>
 
             <article class="member">
-                <img src="../assets/images/band-page/member-liam.webp" alt="Liam Payne">
+                <div class="member-photo">
+                    <img src="../assets/images/band-page/member-liam.webp" alt="Liam Payne">
+                </div>
                 <div class="member-text">
-                    <h3>LIAM PAYNE</h3>
-                    <p>Liam's strong voice and control over lower harmonies helped anchor many of the band's songs, and
+                    <h2 class="member-name">LIAM PAYNE</h2>
+                    <h3 class="member-role">TENOR & SONGWRITER</h3>
+                    <p class="member-content">Liam's strong voice and control over lower harmonies helped anchor many of
+                        the band's songs, and
                         he frequently took the lead on more powerful or rhythmic sections.</p>
                 </div>
             </article>
 
             <article class="member">
-                <img src="../assets/images/band-page/member-louis.jpg" alt="Louis Tomlinson">
+                <div class="member-photo">
+                    <img src="../assets/images/band-page/member-louis.jpg" alt="Louis Tomlinson">
+                </div>
                 <div class="member-text">
-                    <h3>LOUIS TOMLINSON</h3>
-                    <p>Louis contributed character and edge to the group with his distinctive tone, and he was heavily
+                    <h2 class="member-name">LOUIS TOMLINSON</h2>
+                    <h3 class="member-role">LYRICIST</h3>
+                    <p class="member-content">Louis contributed character and edge to the group with his distinctive
+                        tone, and he was heavily
                         involved in shaping the band's sound through songwriting and ideas.</p>
                 </div>
             </article>
 
             <article class="member">
-                <img src="../assets/images/band-page/member-zayn.jpg" alt="Zayn Malik">
+                <div class="member-photo">
+                    <img src="../assets/images/band-page/member-zayn.jpg" alt="Zayn Malik">
+                </div>
                 <div class="member-text">
-                    <h3>ZAYN MALIK</h3>
-                    <p>Zayn was known for his smooth R&amp;B-influenced vocals and impressive high notes, often
+                    <h2 class="member-name">ZAYN MALIK</h2>
+                    <h3 class="member-role">VOCALIST</h3>
+                    <p class="member-content">Zayn was known for his smooth R&amp;B-influenced vocals and impressive
+                        high notes, often
                         delivering the dramatic moments and ad-libs that closed out many of their songs.</p>
                 </div>
             </article>
         </section>
 
-        <section class="gallery">
+        <!-- GALLERY -->
+        <section class="gallery" id="gallery">
             <div class="gallery-header">
                 <h2>GALLERY</h2>
-                <select> <!-- learnt: creates dropdown list with options -->
+
+                <div class="gallery-filter">
+                    <select id="galleryfilter">
+                        <option value="all">ALL PHOTOS</option>
+                        <option value="live">LIVE</option>
+                        <option value="studio">PHOTOSHOOT</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- LIVE (6) -->
+                <div class="gallery-item" data-type="live">
+                    <img src="../assets/images/band-page/gallery-live/band-gallery-live1.webp"
+                        alt="One Direction performing live 1">
+                </div>
+                <div class="gallery-item" data-type="live">
+                    <img src="../assets/images/band-page/gallery-live/band-gallery-live2.webp"
+                        alt="One Direction performing live 2">
+                </div>
+                <div class="gallery-item" data-type="live">
+                    <img src="../assets/images/band-page/gallery-live/band-gallery-live3.webp"
+                        alt="One Direction performing live 3">
+                </div>
+                <div class="gallery-item" data-type="live">
+                    <img src="../assets/images/band-page/gallery-live/band-gallery-live4.webp"
+                        alt="One Direction performing live 4">
+                </div>
+                <div class="gallery-item" data-type="live">
+                    <img src="../assets/images/band-page/gallery-live/band-gallery-live5.webp"
+                        alt="One Direction performing live 5">
+                </div>
+                <div class="gallery-item" data-type="live">
+                    <img src="../assets/images/band-page/gallery-live/band-gallery-live6.webp"
+                        alt="One Direction performing live 6">
+                </div>
+                <div class="gallery-item" data-type="live">
+                    <img src="../assets/images/band-page/gallery-live/band-gallery-live7.webp"
+                        alt="One Direction performing live 7">
+                </div>
+                <div class="gallery-item" data-type="live">
+                    <img src="../assets/images/band-page/gallery-live/band-gallery-live8.jpg"
+                        alt="One Direction performing live 8">
+                </div>
+
+                <!-- STUDIO (6) -->
+                <div class="gallery-item" data-type="studio">
+                    <img src="../assets/images/band-page/gallery-photoshoot/band-gallery-photoshoot1.webp"
+                        alt="One Direction studio photo 1">
+                </div>
+                <div class="gallery-item" data-type="studio">
+                    <img src="../assets/images/band-page/gallery-photoshoot/band-gallery-photoshoot2.webp"
+                        alt="One Direction studio photo 2">
+                </div>
+                <div class="gallery-item" data-type="studio">
+                    <img src="../assets/images/band-page/gallery-photoshoot/band-gallery-photoshoot3.webp"
+                        alt="One Direction studio photo 3">
+                </div>
+                <div class="gallery-item" data-type="studio">
+                    <img src="../assets/images/band-page/gallery-photoshoot/band-gallery-photoshoot4.jpg"
+                        alt="One Direction studio photo 4">
+                </div>
+                <div class="gallery-item" data-type="studio">
+                    <img src="../assets/images/band-page/gallery-photoshoot/band-gallery-photoshoot5.jpg"
+                        alt="One Direction studio photo 5">
+                </div>
+                <div class="gallery-item" data-type="studio">
+                    <img src="../assets/images/band-page/gallery-photoshoot/band-gallery-photoshoot6.jpg"
+                        alt="One Direction studio photo 6">
+                </div>
+                <div class="gallery-item" data-type="studio">
+                    <img src="../assets/images/band-page/gallery-photoshoot/band-gallery-photoshoot7.jpg"
+                        alt="One Direction studio photo 7">
+                </div>
+                <div class="gallery-item" data-type="studio">
+                    <img src="../assets/images/band-page/gallery-photoshoot/band-gallery-photoshoot8.jpg"
+                        alt="One Direction studio photo 8">
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="gallery">
+            <div class="gallery-header">
+                <h2>GALLERY</h2>
+                <select>
                     <option>ALL</option>
                     <option>LIVE</option>
                     <option>STUDIO</option>
@@ -102,7 +207,7 @@
                 <div class="gallery-item"></div>
                 <div class="gallery-item"></div>
             </div>
-        </section>
+        </section> -->
     </main>
 
     <footer class="site-footer">

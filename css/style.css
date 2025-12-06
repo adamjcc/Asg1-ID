@@ -14,7 +14,7 @@ main {
     background: #171717;
 }
 
-/*! HEADERS AND NAV */
+/*! HEADERS */
 .site-header {
     position: fixed;
     top: 0;
@@ -41,6 +41,7 @@ main {
     display: block;
 }
 
+/*! NAVBAR */
 .main-nav ul {
     list-style: none;
     display: flex;
@@ -54,6 +55,60 @@ main {
     text-decoration: none;
     letter-spacing: 0.1em;
     font-size: 0.9rem;
+}
+
+/* Base nav links */
+.main-nav a.nav-link {
+    position: relative;
+    display: inline-block;
+    padding: 0.25rem 0;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+/* tiny movement + fade on hover everywhere */
+.main-nav a.nav-link:hover {
+    transform: translateY(-1px);
+    opacity: 0.85;
+}
+
+/* underline system for non-home pages */
+.band-page .main-nav a.nav-link,
+.tour-page .main-nav a.nav-link,
+.booking-page .main-nav a.nav-link {
+    padding-bottom: 0.35rem;
+}
+
+.band-page .main-nav a.nav-link::after,
+.tour-page .main-nav a.nav-link::after,
+.booking-page .main-nav a.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: #ffffff;
+    transition: width 0.25s ease;
+}
+
+/* hover underline */
+.band-page .main-nav a.nav-link:hover::after,
+.tour-page .main-nav a.nav-link:hover::after,
+.booking-page .main-nav a.nav-link:hover::after {
+    width: 100%;
+}
+
+/* active page underline */
+.main-nav a.nav-link.nav-active::after {
+    width: 100%;
 }
 
 /*! HERO SECTIONS */
@@ -96,7 +151,7 @@ main {
 
 .hero-home .hero-overlay {
     background: none;
-    padding: 2.5rem 4rem;
+    padding: 2.5rem 3.5rem;
     align-items: stretch;
     justify-content: stretch;
     text-align: left;
@@ -151,10 +206,45 @@ main {
 }
 
 .hero-links a {
+    position: relative;
+    display: inline-block;
     text-decoration: none;
     color: #fff;
     font-size: 1.5rem;
     letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.5rem 0.5rem;
+    min-width: 6.5rem;
+    /* common width – similar to CONTACT */
+    text-align: left;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 0.25s ease;
+}
+
+/* white rectangle that fills left → right behind the text */
+.hero-links a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 2px;
+    transform-origin: left center;
+    transform: scaleX(0);
+    z-index: -1;
+    transition: transform 0.25s ease-in-out;
+}
+
+/* animate fill + invert text colour */
+.hero-links a:hover::before {
+    transform: scaleX(1);
+}
+
+.hero-links a:hover {
+    color: #000000;
 }
 
 .hero-socials-icons {
@@ -176,7 +266,7 @@ main {
     text-align: right;
     color: #fff;
     background: none;
-    padding: 0;
+    padding: 0 0.5rem;
 }
 
 .hero-discography h2 {
@@ -247,6 +337,37 @@ main {
 }
 
 .hero-tour-title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    /* scales with screen */
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff;
+}
+
+/*! HERO - BOOKING PAGE */
+.hero-booking {
+    height: 80vh;
+    background: url("../assets/images/booking-page/band_bookingpage.png") center bottom / cover no-repeat;
+}
+
+.booking-page .site-header {
+    background: transparent;
+}
+
+.booking-page .site-header.header-solid {
+    background: #171717;
+}
+
+.hero-booking-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding-top: 6rem;
+}
+
+.hero-booking-title {
     font-size: clamp(3rem, 6vw, 4.5rem);
     /* scales with screen */
     text-transform: uppercase;
@@ -412,22 +533,71 @@ main {
 /*! BAND PAGE - MEMBERS */
 .band-members {
     padding: 5rem 4rem 0rem 4rem;
+    margin: 0 auto;
 }
 
-.member {
+.band-members .member {
     display: flex;
     gap: 4rem;
     margin-bottom: 4rem;
+    align-items: stretch;
+    padding: 2rem;
+    background: #111;
+    /* subtle panel */
+    border-radius: 10px;
+    /* hairline border */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.member img {
-    width: 40%;
+.member:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
 }
 
-.member:nth-child(even) {
+.band-members .member:nth-child(even) {
     justify-content: end;
     flex-direction: row-reverse;
     /* reverse text & images every 2nd member shown */
+}
+
+.band-members .member-photo {
+    flex: 0 0 clamp(320px, 36vw, 420px);
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.band-members .member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* subtle hover */
+.member:hover .member-photo img {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.band-members .member-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 520px;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.band-members .member:nth-child(even) .member-text {
+    text-align: right;
+    align-items: flex-end;
+}
+
+.member-role {
+    color: #aaaaaa;
+    margin-bottom: 1.5rem;
 }
 
 /*! GALLERY GRID */
@@ -443,17 +613,54 @@ main {
     margin-bottom: 1.5rem;
 }
 
-.gallery-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+.gallery-filter {
+    position: relative;
+    display: inline-block;
 }
 
-.gallery-item {
-    flex: 1 1 calc(33.333% - 1rem);
-    aspect-ratio: 1 / 1;
-    background: #eee;
+#galleryfilter {
+    background: #171717;
+    border: 1px solid #3a3a3a;
+    color: #ffffff;
+    padding: 0.6rem 2.4rem 0.6rem 1rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    cursor: pointer;
 }
+
+/* grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+/* square tiles */
+.gallery-item {
+    position: relative;
+    padding-top: 100%;
+    /* 1:1 square */
+    background: #111;
+    overflow: hidden;
+}
+
+/* image fill */
+.gallery-item img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* subtle hover */
+.gallery-item:hover img {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+
 
 /*! EVENTS SECTION (TABLES) */
 .events {
@@ -579,8 +786,6 @@ main {
 /*! FORM */
 .booking {
     padding: 3rem 4rem;
-    background: #333;
-
 }
 
 .form {
