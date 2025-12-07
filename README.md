@@ -108,6 +108,25 @@ A dedicated page for event organizers to hire the band (or a tribute act).
 
 ## Testing
 
+I have conducted manual testing for the core features of the website to ensure they function as intended across different scenarios.
+
+1. Booking Form (Booking Page)
+    1. This test ensures the form validation works before a user can "submit" a request.
+
+    2. Navigate to the "Booking" page.
+
+    3. Empty Submission: Try to click "Submit" without filling in any fields.
+
+    4. Expected Result: The browser displays a "Please fill out this field" warning on the Name input.
+
+    5. Invalid Email: Enter a name but type a plain text string (e.g., "adam") into the Email field and submit.
+
+    6. Expected Result: The browser displays an error message prompting for a "@" symbol or valid email structure.
+
+Valid Submission: Fill in all required fields (Name, Email) and select an Event Date. Click Submit.
+
+Expected Result: The page refreshes (default form behavior), indicating the data would have been sent.
+
 <!-- For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
 1. Contact form:
@@ -123,9 +142,6 @@ You should also mention in this section any interesting bugs or problems you dis
 If this section grows too long, you may want to split it off into a separate file and link to it from here. -->
 
 ## Credits
-
-### Content
-<!-- - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)-->
 
 ### Media
 #### Main Page Images

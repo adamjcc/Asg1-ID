@@ -16,6 +16,10 @@ body {
     font-family: var(--font-body);
     background: #171717;
     color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
 }
 
 main {
@@ -165,6 +169,102 @@ h6 {
 /* active page underline */
 .main-nav a.nav-link.nav-active::after {
     width: 100%;
+}
+
+/* ---------- MOBILE MENU ---------- */
+.menu-toggle,
+.menu-close {
+    display: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.menu-toggle img,
+.menu-close img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: #111;
+    color: #fff;
+    z-index: 1500;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1.5rem 2rem 2.5rem;
+
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+.mobile-menu-panel {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+}
+
+.mobile-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mobile-logo img {
+    height: 32px;
+    display: block;
+}
+
+.mobile-nav-link {
+    font-family: var(--font-header, "Oswald", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif);
+    font-size: 1.8rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+
+.mobile-nav-link:hover {
+    opacity: 0.7;
+}
+
+.mobile-menu.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+body.menu-open {
+    overflow: hidden;
 }
 
 /*! HERO SECTIONS */
@@ -561,6 +661,7 @@ h6 {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    flex-shrink: 0;
 }
 
 .socials {
@@ -1012,4 +1113,333 @@ h6 {
 .tour-page .section-header h2 {
     font-family: var(--font-heading, "Oswald", -apple-system, BlinkMacSystemFont, system-ui, sans-serif);
     font-size: clamp(1.7rem, 1.1rem + 1vw, 2.2rem);
+}
+
+/*! MEDIA QUERY - RESPONSIVE LAYOUTS */
+/* ---------- Large tablets / small laptops ---------- */
+@media (max-width: 1024px) {
+
+    /* Slightly tighter header + section padding */
+    .site-header {
+        padding: 1rem 1.5rem;
+    }
+
+    .main-nav ul {
+        padding: 0 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .hero-home .hero-overlay {
+        padding: 2rem 2.5rem;
+    }
+
+    .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .hero-discography {
+        max-width: none;
+        text-align: left;
+    }
+
+    .about,
+    .about-band,
+    .stats,
+    .videos,
+    .events,
+    .booking,
+    .gallery,
+    .band-members {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .band-members .member {
+        gap: 2.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* ---------- Tablets & general mobile base ---------- */
+@media (max-width: 768px) {
+
+    /* HEADER / NAV */
+    .site-header {
+        padding: 1rem 1.5rem;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .logo-img {
+        padding: 0;
+        height: 32px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .main-nav ul {
+        padding: 0;
+        margin-top: 0.25rem;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .main-nav a.nav-link {
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+    }
+
+    /* HOME HERO */
+    .hero-home {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .hero-home .hero-overlay {
+        padding: 5rem 1.5rem 2.5rem;
+    }
+
+    .hero-top {
+        text-align: left;
+    }
+
+    .hero-wordmark {
+        width: 80vw;
+        margin: 1.5rem 0 2rem 0;
+    }
+
+    .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-left {
+        order: 2;
+    }
+
+    .hero-discography {
+        order: 1;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .hero-links a {
+        font-size: 1.2rem;
+    }
+
+    /* SECTION PADDING */
+    .home-page .about-box {
+        padding: 2rem 1.5rem;
+    }
+
+    .about,
+    .about-band,
+    .stats,
+    .videos,
+    .events,
+    .booking,
+    .gallery,
+    .band-members {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    /* STATS */
+    .stats {
+        padding: 2rem 1.5rem 3rem;
+    }
+
+    .stats-grid {
+        flex-direction: column;
+    }
+
+    .stat-card {
+        width: 100%;
+        padding: 2.2rem 1.5rem;
+    }
+
+    /* keep stat numbers strong but not overflowing */
+    .stat-value {
+        font-size: 1.8rem;
+    }
+
+    /* VIDEOS */
+    .videos {
+        padding: 2rem 1.5rem;
+    }
+
+    .video-slider {
+        flex-direction: column;
+    }
+
+    .arrow-btn {
+        font-size: 1.5rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    /* BAND / TOUR / BOOKING HERO HEADERS */
+    .hero-band-overlay,
+    .hero-tour-overlay,
+    .hero-booking-overlay {
+        padding-top: 5rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* BAND MEMBERS */
+    .band-members {
+        padding: 4rem 1.5rem 0 1.5rem;
+    }
+
+    .band-members .member,
+    .band-members .member:nth-child(even) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .band-members .member-photo {
+        margin: 0 auto 1.5rem auto;
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .band-members .member-text {
+        max-width: none;
+        align-items: center;
+        text-align: center;
+    }
+
+    .member-role {
+        margin-bottom: 1rem;
+    }
+
+    /* GALLERY */
+    .gallery {
+        padding: 2rem 1.5rem 3rem;
+    }
+
+    .gallery-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    /* TOUR DATES TABLE */
+    .events {
+        padding: 2rem 1.5rem;
+    }
+
+    .events-table,
+    .events-table tbody,
+    .events-table tr,
+    .events-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .events-table tr {
+        border-bottom: none;
+        border-top: 1px solid #444;
+        padding-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .events-table td {
+        padding: 0.3rem 0;
+        text-align: left;
+    }
+
+    .date-col {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .btn-col {
+        text-align: left;
+        margin-top: 0.75rem;
+    }
+
+    .btn-book {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* BOOKING FORM */
+    .booking {
+        padding: 2rem 1.5rem 3rem;
+    }
+}
+
+/* ---------- Small phones / narrow screens ---------- */
+@media (max-width: 480px) {
+
+    .hero-home .hero-overlay {
+        padding-top: 4.5rem;
+    }
+
+    .hero-links a {
+        font-size: 1.1rem;
+        letter-spacing: 0.16em;
+    }
+
+    .home-page .about-box {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .stats,
+    .videos,
+    .events,
+    .gallery,
+    .band-members,
+    .booking {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .band-members .member {
+        padding: 1.25rem;
+    }
+
+    .site-footer {
+        padding: 3rem 1rem 3.5rem 1rem;
+    }
+
+    .socials {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-footer {
+        padding: 2.25rem 1.5rem 1.75rem;
+    }
+
+    .socials {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
 }

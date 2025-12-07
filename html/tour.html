@@ -12,7 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" type="image/png" href="../assets/images/others/logo.png">
+    <link rel="icon" type="image/png" href="../assets/icons/logo.png">
     <script src="../javascript/script.js"></script>
 </head>
 
@@ -24,14 +24,42 @@
                 <img src="../assets/icons/logo.png" alt="One Direction logo" class="logo-img">
             </a>
         </div>
+
+        <!-- menu overlay -->
+        <button class="menu-toggle" aria-label="Open menu">
+            <img src="../assets/icons/menu.png" alt="">
+        </button>
+
         <nav class="main-nav">
             <ul>
                 <li><a href="band.html" class="nav-link">BAND</a></li>
-                <li><a href="tour.html" class="nav-link nav-active">TOUR</a></li>
+                <li><a href="tour.html" class="nav-link">TOUR</a></li>
                 <li><a href="booking.html" class="nav-link">BOOKING</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- mobile menu overlay -->
+    <div class="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-panel">
+            <div class="mobile-menu-header">
+                <a href="index.html" class="mobile-logo">
+                    <!-- you can reuse the same logo; white-on-black looks fine -->
+                    <img src="../assets/icons/logo.png" alt="One Direction">
+                </a>
+
+                <button class="menu-close" aria-label="Close menu">
+                    <img src="../assets/icons/menu-close.png" alt="">
+                </button>
+            </div>
+
+            <nav class="mobile-nav">
+                <a href="band.html" class="mobile-nav-link">Band</a>
+                <a href="tour.html" class="mobile-nav-link">Tour</a>
+                <a href="booking.html" class="mobile-nav-link">Booking</a>
+            </nav>
+        </div>
+    </div>
 
     <main>
         <section class="hero hero-tour">

@@ -130,10 +130,51 @@ document.addEventListener("DOMContentLoaded", function () {
             window.addEventListener("scroll", toggleBookingHeader);
         }
     }
+
+    //! MOBILE MENU
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    const menuClose = document.querySelector(".menu-close");
+    const mobileLinks = document.querySelectorAll(".mobile-nav a");
+
+    if (menuToggle && mobileMenu) {
+        const openMenu = () => {
+            mobileMenu.classList.add("is-open");
+            document.body.classList.add("menu-open");
+            mobileMenu.setAttribute("aria-hidden", "false");
+        };
+
+        const closeMenu = () => {
+            mobileMenu.classList.remove("is-open");
+            document.body.classList.remove("menu-open");
+            mobileMenu.setAttribute("aria-hidden", "true");
+        };
+
+        menuToggle.addEventListener("click", openMenu);
+        if (menuClose) {
+            menuClose.addEventListener("click", closeMenu);
+        }
+
+        mobileMenu.addEventListener("click", (event) => {
+            if (event.target === mobileMenu) {
+                closeMenu();
+            }
+        });
+
+        mobileLinks.forEach((link) => {
+            link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closeMenu();
+            }
+        });
+    }
 });
 
 
-//! ---------- GALLERY FILTER ----------
+//! GALLERY FILTER
 document.addEventListener("DOMContentLoaded", () => {
     const filterSelect = document.querySelector("#galleryfilter");
     const galleryItems = document.querySelectorAll(".gallery-item");
@@ -152,5 +193,48 @@ document.addEventListener("DOMContentLoaded", () => {
                 item.style.display = "none";
             }
         });
+    });
+});
+
+//! MOBILE MENU TOGGLE
+document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    const menuClose = document.querySelector(".menu-close");
+    const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+
+    if (!menuToggle || !mobileMenu) return;
+
+    const openMenu = () => {
+        mobileMenu.classList.add("open");
+        body.classList.add("menu-open");
+    };
+
+    const closeMenu = () => {
+        mobileMenu.classList.remove("open");
+        body.classList.remove("menu-open");
+    };
+
+    menuToggle.addEventListener("click", openMenu);
+
+    if (menuClose) {
+        menuClose.addEventListener("click", closeMenu);
+    }
+
+    mobileMenu.addEventListener("click", (event) => {
+        if (event.target === mobileMenu) {
+            closeMenu();
+        }
+    });
+
+    mobileLinks.forEach((link) => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeMenu();
+        }
     });
 });
