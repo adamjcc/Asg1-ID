@@ -110,22 +110,49 @@ A dedicated page for event organizers to hire the band (or a tribute act).
 
 I have conducted manual testing for the core features of the website to ensure they function as intended across different scenarios.
 
-1. Booking Form (Booking Page)
-    1. This test ensures the form validation works before a user can "submit" a request.
+### 1. Booking Form (Booking Page)
+This test ensures the form validation works before a user can "submit" a request.
+1.  **Navigate** to the "Booking" page.
+2.  **Empty Submission:** Try to click "Submit" without filling in any fields.
+    * *Expected Result:* The browser displays a "Please fill out this field" warning on the Name input.
+3.  **Invalid Email:** Enter a name but type a plain text string (e.g., "adam") into the Email field and submit.
+    * *Expected Result:* The browser displays an error message prompting for a "@" symbol or valid email structure.
+4.  **Valid Submission:** Fill in all required fields (Name, Email) and select an Event Date. Click Submit.
+    * *Expected Result:* The page refreshes (default form behavior), indicating the data would have been sent.
 
-    2. Navigate to the "Booking" page.
+### 2. Video Slider (Home Page)
+This test checks the JavaScript logic for the custom video player controls.
+1.  **Navigate** to the "Home" page and scroll to the "Latest Videos" section.
+2.  **Next Arrow:** Click the right arrow button.
+    * *Expected Result:* The video changes to the next song ("Story of My Life") and the second dot indicator lights up.
+3.  **Looping:** Click the right arrow until the last video is reached, then click it again.
+    * *Expected Result:* The slider loops back to the first video ("What Makes You Beautiful").
+4.  **Dot Navigation:** Click the 3rd dot directly.
+    * *Expected Result:* The player immediately jumps to the 3rd video ("Night Changes").
 
-    3. Empty Submission: Try to click "Submit" without filling in any fields.
+### 3. Gallery Filter (Band Page)
+This test verifies that the JavaScript dropdown correctly hides and shows image elements.
+1.  **Navigate** to the "Band" page and scroll to the "Gallery" section.
+2.  **Filter 'Live':** Select "LIVE" from the dropdown menu.
+    * *Expected Result:* Only images of the band performing on stage are visible. All studio photos are hidden.
+3.  **Filter 'Photoshoot':** Select "PHOTOSHOOT" from the dropdown menu.
+    * *Expected Result:* Only the posed studio portraits are visible. Live photos are hidden.
+4.  **Filter 'All':** Switch back to "ALL PHOTOS".
+    * *Expected Result:* The grid repopulates with every image in the collection.
 
-    4. Expected Result: The browser displays a "Please fill out this field" warning on the Name input.
+### 4. Responsive Layout & Browser Compatibility
+The website was tested using **Google Chrome** and **Microsoft Edge**. Responsiveness was tested using Chrome Developer Tools to simulate various screen sizes.
 
-    5. Invalid Email: Enter a name but type a plain text string (e.g., "adam") into the Email field and submit.
+* **Desktop (1200px+):** The layout displays full Hero banners, a 4-column Gallery grid, and a horizontal Navigation bar.
+* **Tablet (768px):** The Gallery grid adjusts to 2 columns to maintain image visibility. The Hero text scales down using `clamp()` typography.
+* **Mobile (375px):**
+    * The Navigation bar is easily tappable.
+    * The "About" and "Stats" sections stack vertically for easier scrolling.
+    * The "Tour Dates" table compresses, but horizontal scrolling or stacking ensures content remains readable.
 
-    6. Expected Result: The browser displays an error message prompting for a "@" symbol or valid email structure.
-
-Valid Submission: Fill in all required fields (Name, Email) and select an Event Date. Click Submit.
-
-Expected Result: The page refreshes (default form behavior), indicating the data would have been sent.
+### Known Bugs / Issues
+* **YouTube Playback:** On some local environments (Localhost), the YouTube videos may display a "Video Unavailable" error due to copyright restrictions on the specific One Direction Vevo channel. This often resolves itself when hosted on a live domain (GitHub Pages) or by using different video IDs.
+* **Form Submission:** The booking form is currently a static HTML frontend. Clicking "Submit" refreshes the page but does not actually send an email to a backend server yet.
 
 <!-- For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
