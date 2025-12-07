@@ -28,16 +28,16 @@ document.addEventListener("DOMContentLoaded", function () {
         if (videoPlayer && prevBtn && nextBtn && dots.length) {
             const videos = [
                 {
-                    src: "https://www.youtube.com/embed/CPARHayTxqc",
-                    title: "One Direction - What Makes You Beautiful (Lyric Video)",
+                    src: "https://www.youtube.com/embed/QJO3ROT-A4E",
+                    title: "One Direction - What Makes You Beautiful (Music Video)",
                 },
                 {
-                    src: "https://www.youtube.com/embed/eQmVAq4Sdww",
-                    title: "One Direction - Story of My Life (Lyric Video)",
+                    src: "https://www.youtube.com/embed/W-TE_Ys4iwM",
+                    title: "One Direction - Story of My Life (Music Video)",
                 },
                 {
-                    src: "https://www.youtube.com/embed/bMBdqvJWofQ",
-                    title: "One Direction - Night Changes (Lyric Video)",
+                    src: "https://www.youtube.com/embed/syFZfO_wfMQ",
+                    title: "One Direction - Night Changes (Music Video)",
                 },
             ];
 
@@ -111,6 +111,23 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             toggleTourHeader();
             window.addEventListener("scroll", toggleTourHeader);
+        }
+    }
+
+    //! BOOKING PAGE
+    if (body.classList.contains("booking-page")) {
+        const bookingHero = document.querySelector(".hero-booking");
+        if (bookingHero) {
+            function toggleBookingHeader() {
+                const heroBottom = bookingHero.getBoundingClientRect().bottom;
+                if (heroBottom <= 0) {
+                    header.classList.add("header-solid");   // solid bar
+                } else {
+                    header.classList.remove("header-solid"); // transparent over image
+                }
+            }
+            toggleBookingHeader();
+            window.addEventListener("scroll", toggleBookingHeader);
         }
     }
 });
